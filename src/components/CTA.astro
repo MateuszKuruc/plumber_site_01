@@ -31,6 +31,9 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+    #cta-80 .cs-topper {
+        color: var(--secondary);
+    }
     #cta-80 {
         padding: var(--sectionPadding);
         position: relative;
@@ -55,6 +58,8 @@
         position: absolute;
         top: 0;
         left: 0;
+        /* background-color: pink; */
+        background: var(--primary);
         /* prevent stripes from overlapping sections above and below */
         overflow: hidden;
         /* Makes it so your cursor acts like it doesn't exist */
@@ -148,6 +153,10 @@
 
     #cta-80 .cs-button-solid {
         margin: 0;
+        background-color: var(--secondary);
+    }
+    #cta-80 .cs-button-solid:hover {
+        background-color: #1a1a1a;
     }
     #cta-80 .cs-picture {
         width: 100%;
@@ -165,7 +174,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        border-radius: 0.5rem 0.5rem 0 0;
+        /* border-radius: 0.5rem 0.5rem 0 0; */
         object-fit: cover;
     }
 }
