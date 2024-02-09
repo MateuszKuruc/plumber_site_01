@@ -56,6 +56,9 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+    .cs-button-solid {
+        margin: 0;
+    }
     #hero-1060 {
         padding: var(--sectionPadding);
         /* 200px - 300px - leaving extra space for the navigation */
@@ -138,36 +141,6 @@
         max-width: clamp(29rem, 60vw, 38.785rem);
         margin: 0 0 2.5rem 0;
         color: #fff;
-    }
-    #hero-1060 .cs-button-solid {
-        font-size: 1rem;
-        /* 46px - 56px */
-        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-        text-decoration: none;
-        font-weight: 700;
-        margin: 0;
-        color: #fff;
-        padding: 0 1.5rem;
-        background-color: var(--primary);
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-    }
-    #hero-1060 .cs-button-solid:before {
-        content: "";
-        position: absolute;
-        display: block;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width 0.3s;
-    }
-    #hero-1060 .cs-button-solid:hover:before {
-        width: 100%;
     }
     #hero-1060 .cs-card-group {
         margin: 0;
