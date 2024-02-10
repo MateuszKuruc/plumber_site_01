@@ -10,17 +10,6 @@
                 <!-- Remove the light class if you don't need the dark logo -->
                 <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Footer/logo.svg" alt="logo" width="240" height="32">
             </a>
-            <div class="cs-social">
-                <a class="cs-social-link" aria-label="visit google profile" href="">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="google" width="11" height="11">
-                </a>
-                <a class="cs-social-link" aria-label="visit facebook profile" href="">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="facebook" width="6" height="11">
-                </a>
-                <a class="cs-social-link" aria-label="visit instagram profile" href="">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg" alt="instagram" width="11" height="11">
-                </a>
-            </div>
         </div>
         <!-- Links -->
         <ul class="cs-nav">
@@ -100,38 +89,6 @@
         width: 100%;
         height: auto;
     }
-    #cs-footer-274 .cs-social {
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 0.75rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    #cs-footer-274 .cs-social-link {
-        width: 1.5rem;
-        height: 1.5rem;
-        background-color: #4e4b66;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-        transition:
-            transform 0.3s,
-            background-color 0.3s;
-    }
-    #cs-footer-274 .cs-social-link:hover {
-        background-color: var(--primary);
-        transform: translateY(-0.1875rem);
-    }
-    #cs-footer-274 .cs-social-img {
-        height: 0.8125rem;
-        width: auto;
-        display: block;
-    }
     #cs-footer-274 .cs-nav {
         padding: 0;
         margin: 0;
@@ -139,7 +96,7 @@
     #cs-footer-274 .cs-nav-li {
         list-style: none;
         margin: 0;
-        color: var(--bodyTextColor);
+        color: var(--headerColor);
     }
     #cs-footer-274 .cs-header {
         font-size: 1rem;
@@ -147,7 +104,7 @@
         font-weight: 700;
         /* 16px - 20px */
         margin-bottom: clamp(1rem, 2.7vw, 1.25rem);
-        color: var(--bodyTextColor);
+        color: var(--headerColor);
         position: relative;
         display: block;
     }
@@ -155,7 +112,7 @@
         font-size: 1rem;
         text-decoration: none;
         line-height: 1.5em;
-        color: var(--bodyTextColor);
+        color: var(--headerColor);
         position: relative;
     }
     #cs-footer-274 .cs-nav-link:before {

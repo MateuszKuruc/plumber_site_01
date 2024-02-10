@@ -14,27 +14,27 @@
         <ul class="cs-card-group">
             <li class="cs-item">
                 <picture class="cs-icon-wrapper">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/car1.svg" alt="car" width="48" height="48">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/plumber3.svg" alt="car" width="48" height="48">
                 </picture>
-                <h3 class="cs-h3">Pogotowie hydrauliczne</h3>
+                <h2 class="cs-h2">Pogotowie hydrauliczne</h2>
                 <p class="cs-item-text">
                     Jestem dostępny 24/7 żebyś mógł na mnie liczyć nawet przy awarii w środku nocy. Zadzwoń, a pojawię się tak szybko jak to możliwe.
                 </p>
             </li>
             <li class="cs-item">
                 <picture class="cs-icon-wrapper">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/car2.svg" alt="car" width="48" height="48">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/plumber2.svg" alt="car" width="48" height="48">
                 </picture>
-                <h3 class="cs-h3">Drobne naprawy</h3>
+                <h2 class="cs-h2">Drobne naprawy</h2>
                 <p class="cs-item-text">
                     Przecieka zlew, zatkała się toaleta albo trzeba wymienić armaturę? Z łatwością wykonam podstawowe usługi hydrauliczne.
                 </p>
             </li>
             <li class="cs-item">
                 <picture class="cs-icon-wrapper">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/car3.svg" alt="car" width="48" height="48">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/plumber1.svg" alt="car" width="48" height="48">
                 </picture>
-                <h3 class="cs-h3">Instalacje kompleksowe</h3>
+                <h2 class="cs-h2">Instalacje kompleksowe</h2>
                 <p class="cs-item-text">
                     Specjalizuję się także w przeróbkach oraz instalacji systemów wodnych. Jeśli potrzebujesz wykonawcy instalacji w nowym mieszkaniu, odezwij się do mnie.
                 </p>
@@ -44,9 +44,9 @@
 
     <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic-m.jpg">
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic.jpg">
-        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic.jpg" alt="mechanic" width="2250" height="1500" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="/assets/hero.webp">
+        <source media="(min-width: 601px)" srcset="/assets/hero.webp">
+        <img decoding="async" src="/assets/hero.webp" alt="mechanic" width="2250" height="1500" aria-hidden="true">
     </picture>
 </section>
                                 
@@ -184,7 +184,7 @@
         width: 3rem;
         height: auto;
     }
-    #hero .cs-h3 {
+    #hero .cs-h2 {
         /* 20px - 25px */
         font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
         line-height: 1.2em;
@@ -238,7 +238,6 @@
 /* Large Desktop Parallax Effect - 100px */
 @media only screen and (min-width: 100rem) {
     #hero .cs-background {
-        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic.jpg");
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
