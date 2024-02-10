@@ -21,39 +21,35 @@
         <div class="cs-ul-wrapper">
             <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                 <li class="cs-li">
-                    <a href="" class="cs-li-link cs-active">
-                        Home
+                    <a href="#hero" class="cs-li-link">
+                        Strona główna
                     </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-li-link">
-                        About
+                    <a href="#hero" class="cs-li-link">
+                        O mnie
                     </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-li-link">
-                        Services
+                    <a href="#services" class="cs-li-link">
+                        Usługi
                     </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-li-link">
-                        Weight Loss
+                    <a href="#contact" class="cs-li-link">
+                        Formularz kontaktowy
                     </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-li-link">
-                        Aesthetics
-                    </a>
-                </li>
-                <li class="cs-li">
-                    <a href="" class="cs-li-link">
-                        FAQ
-                    </a>
+                    <div class="call">
+                        Zadzwoń +48 911 279 868
+                    <div>
                 </li>
             </ul>
         </div>
     </nav>
-    <a href="" class="cs-button-solid cs-nav-button">Contact Us</a>
+   
+    <a href="#contact" class="cs-button-solid cs-nav-button">Kontakt</a>
     <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
     <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
         <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
@@ -75,6 +71,9 @@ html {
 
 /* Mobile - 1023px */
 @media only screen and (max-width: 63.9375rem) {
+    .call {
+        display: none;
+    }
     body.cs-open {
         overflow: hidden;
     }
@@ -86,9 +85,10 @@ html {
         background-color: #fff;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         position: fixed;
+        top: 0;
         z-index: 10000;
     }
-    #cs-navigation:before {
+    #cs-navigation:after {
         /* on hover green bar */
         content: "";
         width: 40%;
@@ -106,21 +106,40 @@ html {
             max-width 0.3s,
             background-color 0.3s;
     }
-    #cs-navigation.cs-active:before {
+    #cs-navigation:before {
+        /* grey blurred overlay */
+        content: "";
+        width: 0%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        position: absolute;
+        display: block;
+        top: 100%;
+        right: 0;
+        z-index: -11;
+        transition:
+            width 0.5s,
+            opacity 0.3s;
+    }
+    #cs-navigation.cs-active:after {
         width: 100%;
         max-width: 100%;
         background-color: #484848;
     }
-    #cs-navigation.cs-active .cs-link {
-        color: var(--bodyTextColorWhite);
+    #cs-navigation.cs-active:before {
+        width: 100%;
+        opacity: 1;
     }
     #cs-navigation.cs-active .cs-ul-wrapper {
         opacity: 1;
-        transform: scaleY(1);
-        transition-delay: 0.1s;
+        transform: scaleX(1);
+        transition-delay: 0.2s;
     }
     #cs-navigation.cs-active .cs-li {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
     }
     #cs-navigation .cs-logo {
@@ -143,6 +162,8 @@ html {
         height: 100%;
         /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
         object-fit: contain;
+        /* places the image to the left edge of the parent */
+        object-position: left;
     }
     #cs-navigation .cs-toggle {
         /* 44px - 48px */
@@ -216,41 +237,42 @@ html {
             opacity 0.3s;
     }
     #cs-navigation .cs-ul-wrapper {
-        width: 100%;
-        /* height: 100vh; */
+        height: 100vh;
         opacity: 0;
         background-color: #fff;
         box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
         overflow: hidden;
         position: absolute;
         top: 100%;
-        left: 0;
+        left: auto;
+        right: 0;
         z-index: -1;
-        transform: scaleY(0);
-        transform-origin: top;
+        transform: scaleX(0);
+        transform-origin: top right;
         transition:
             transform 0.4s,
             opacity 0.3s;
     }
     #cs-navigation .cs-ul {
         margin: 0;
-        padding: 3rem 0 3rem 0;
-        width: 100%;
-        height: auto;
-        max-height: 65vh;
+        /* 28px - 40px */
+        padding: 3rem clamp(1.75rem, 3vw, 2.5rem) 2rem 4.375rem;
+        width: auto;
+        min-width: 40%;
+        height: 65vh;
         overflow: scroll;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
         gap: 1.25rem;
     }
     #cs-navigation .cs-li {
-        text-align: center;
+        text-align: right;
         list-style: none;
         margin-right: 0;
         /* transition from these values */
-        transform: translateY(-4.375rem);
+        transform: translateX(-2.5rem);
         opacity: 0;
         transition:
             transform 0.6s,
@@ -283,15 +305,26 @@ html {
     #cs-navigation .cs-li:nth-of-type(9) {
         transition-delay: 0.45s;
     }
+    #cs-navigation .cs-li:nth-of-type(10) {
+        transition-delay: 0.5s;
+    }
+    #cs-navigation .cs-li:nth-of-type(11) {
+        transition-delay: 0.55s;
+    }
+    #cs-navigation .cs-li:nth-of-type(12) {
+        transition-delay: 0.6s;
+    }
+    #cs-navigation .cs-li:nth-of-type(13) {
+        transition-delay: 0.65s;
+    }
     #cs-navigation .cs-li-link {
         /* 16px - 24px */
-        font-size: clamp(1rem, 3vw, 1.5rem);
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
         line-height: 1.2em;
         text-decoration: none;
         margin: 0;
         color: var(--headerColor);
         display: inline-block;
-        position: relative;
     }
     #cs-navigation .cs-li-link:before {
         /* active state underline */
@@ -308,7 +341,9 @@ html {
     #cs-navigation .cs-li-link.cs-active:before {
         display: block;
     }
-
+    #cs-navigation .cs-button-solid {
+        display: none;
+    }
 }
 
 /*-- -------------------------- -->
@@ -317,6 +352,10 @@ html {
 
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
+    .call {
+        display: block;
+        font-weight: 700;
+    }
     #cs-navigation {
         width: 100%;
         /* 23px - 420px */
@@ -405,8 +444,41 @@ html {
         left: 0;
         transition: width 0.3s;
     }
-
-  
+    #cs-navigation .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+    #cs-navigation .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width 0.3s;
+    }
+    #cs-navigation .cs-button-solid:hover:before {
+        width: 100%;
+    }
     #cs-navigation .cs-nav-button {
         margin: 0 0 0 auto;
     }

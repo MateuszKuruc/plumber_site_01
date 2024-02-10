@@ -2,12 +2,12 @@
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-1060">
+<section id="hero">
     <div class="cs-container">
         <div class="cs-content">
             <h1 class="cs-title">Awaria w mieszkaniu? Nie zostaniesz z tym sam!</h1>
             <p class="cs-text">
-                Zadzwoń i uzyskaj profesjonalną i szybką pomoc na terenie Koszalina i okolic
+                Zadzwoń i uzyskaj profesjonalną i szybką pomoc na terenie Koszalina i okolic. 10 lat doświadczenia w zakresie napraw i przeróbek instalacji wodno-kanalizacyjnych. Dostępność 24/7!
             </p>
             <a href="" class="cs-button-solid">Skontaktuj się już teraz</a>
         </div>
@@ -59,14 +59,14 @@
     .cs-button-solid {
         margin: 0;
     }
-    #hero-1060 {
+    #hero {
         padding: var(--sectionPadding);
         /* 200px - 300px - leaving extra space for the navigation */
         padding-top: clamp(12.5rem, 31.95vw, 18.75rem);
         position: relative;
         z-index: 1;
     }
-    #hero-1060 .cs-background {
+    #hero .cs-background {
         width: 100%;
         height: 55%;
         display: block;
@@ -75,7 +75,7 @@
         left: 0;
         z-index: -2;
     }
-    #hero-1060 .cs-background:before {
+    #hero .cs-background:before {
         /* Overlay */
         content: "";
         width: 100%;
@@ -90,7 +90,7 @@
         /* prevents the cursor from interacting with it */
         pointer-events: none;
     }
-    #hero-1060 .cs-background img {
+    #hero .cs-background img {
         position: absolute;
         top: 0;
         left: 0;
@@ -100,7 +100,7 @@
         /* makes the top of the image start at the top of the parent */
         object-position: top;
     }
-    #hero-1060 .cs-container {
+    #hero .cs-container {
         width: 100%;
         max-width: 80rem;
         margin: auto;
@@ -110,7 +110,7 @@
         flex-direction: column;
         gap: clamp(6.25rem, 9vw, 7.5rem);
     }
-    #hero-1060 .cs-content {
+    #hero .cs-content {
         /* set text align to left if content needs to be left aligned */
         text-align: center;
         width: 100%;
@@ -120,7 +120,7 @@
         /* centers content horizontally, set to flex-start to left align */
         align-items: center;
     }
-    #hero-1060 .cs-title {
+    #hero .cs-title {
         /* 39px - 61px */
         font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
         font-weight: 700;
@@ -131,7 +131,7 @@
         color: #fff;
         position: relative;
     }
-    #hero-1060 .cs-text {
+    #hero .cs-text {
         /* 16px - 20px */
         font-size: clamp(1rem, 1.95vw, 1.25rem);
         line-height: 1.5em;
@@ -142,7 +142,7 @@
         margin: 0 0 2.5rem 0;
         color: #fff;
     }
-    #hero-1060 .cs-card-group {
+    #hero .cs-card-group {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -150,7 +150,7 @@
         grid-template-columns: repeat(12, 1fr);
         row-gap: 1.875rem;
     }
-    #hero-1060 .cs-item {
+    #hero .cs-item {
         width: 100%;
         text-align: left;
         list-style: none;
@@ -170,7 +170,7 @@
         position: relative;
         z-index: 1;
     }
-    #hero-1060 .cs-icon-wrapper {
+    #hero .cs-icon-wrapper {
         width: 4.25rem;
         height: 4.25rem;
         margin: 0 0 1.5rem 0;
@@ -180,11 +180,11 @@
         align-items: center;
         position: relative;
     }
-    #hero-1060 .cs-icon {
+    #hero .cs-icon {
         width: 3rem;
         height: auto;
     }
-    #hero-1060 .cs-h3 {
+    #hero .cs-h3 {
         /* 20px - 25px */
         font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
         line-height: 1.2em;
@@ -193,7 +193,7 @@
         margin: 0 0 0.75rem 0;
         color: var(--headerColor);
     }
-    #hero-1060 .cs-item-text {
+    #hero .cs-item-text {
         /* 14px - 16px */
         font-size: clamp(0.875rem, 1.5vw, 1rem);
         line-height: 1.5em;
@@ -205,27 +205,27 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #hero-1060 {
+    #hero {
         padding-bottom: 0;
     }
-    #hero-1060 .cs-container {
+    #hero .cs-container {
         align-items: flex-start;
     }
-    #hero-1060 .cs-content {
+    #hero .cs-content {
         text-align: left;
         margin-left: 0;
         align-items: flex-start;
     }
-    #hero-1060 .cs-card-group {
+    #hero .cs-card-group {
         column-gap: 1.875rem;
     }
-    #hero-1060 .cs-item {
+    #hero .cs-item {
         grid-column: span 4;
     }
-    #hero-1060 .cs-background {
+    #hero .cs-background {
         height: 87%;
     }
-    #hero-1060 .cs-background:before {
+    #hero .cs-background:before {
         background: linear-gradient(
             to right,
             rgba(0, 0, 0, 0.94) 0%,
@@ -237,7 +237,7 @@
 }
 /* Large Desktop Parallax Effect - 100px */
 @media only screen and (min-width: 100rem) {
-    #hero-1060 .cs-background {
+    #hero .cs-background {
         background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic.jpg");
         background-size: cover;
         background-position: center top;
@@ -245,7 +245,7 @@
         /* creates the parallax effect */
         background-attachment: fixed;
     }
-    #hero-1060 .cs-background img {
+    #hero .cs-background img {
         display: none;
     }
 }
