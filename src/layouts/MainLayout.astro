@@ -28,7 +28,7 @@ const { title } = Astro.props;
 :root {
     --primary: #7d8597;
     --primaryLight: #232121;
-    --secondary: #ffba43;
+    --secondary: #780000;
     --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
@@ -58,7 +58,7 @@ body {
     text-align: inherit;
     letter-spacing: .1em;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--secondary);
     margin-bottom: 0.25rem;
     display: block;
 }
@@ -91,6 +91,7 @@ body {
     font-weight: 700;
     margin: auto;
     color: #fff;
+    color: var(--headerColor);
     padding: 0 1.5rem;
     /* background-color: #9a6509; */
     background-color: var(--primary);
